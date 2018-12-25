@@ -4,7 +4,7 @@ import (
 	rawlog "log"
 	"os"
 	"logwrapper/logwrapper"
-	gsrlog "github.com/go-forward/GSR/gsr/log"
+	"github.com/go-forward/GSR/gsr"
 )
 
 func main() {
@@ -12,7 +12,7 @@ func main() {
 	logger := &logwrapper.Logger{}
 	logger.SetRawLogger(rawLogger)
 
-	var loggerImp gsrlog.LoggerInterface
+	var loggerImp gsr.LoggerInterface
 	loggerImp = logger
 	loggerImp.Errorf("Hello")
 	loggerImp.Warningf("World")
