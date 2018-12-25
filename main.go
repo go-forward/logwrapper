@@ -1,14 +1,14 @@
 package main
 
 import (
-	rawlog "log"
+	"log"
 	"os"
 	"logwrapper/logwrapper"
 	"github.com/go-forward/GSR/gsr"
 )
 
 func main() {
-	rawLogger := rawlog.New(os.Stdout, "", rawlog.Lshortfile|rawlog.LstdFlags)
+	rawLogger := log.New(os.Stdout, "", log.Lshortfile|log.LstdFlags)
 	logger := &logwrapper.Logger{}
 	logger.SetRawLogger(rawLogger)
 
