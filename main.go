@@ -1,7 +1,5 @@
-# logwrapper
-wrapper for log
+package main
 
-```Go
 import (
 	rawlog "log"
 	"os"
@@ -19,4 +17,3 @@ func main() {
 	loggerImp.Errorf("Hello")
 	loggerImp.Warningf("World")
 }
-```
